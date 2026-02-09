@@ -20,9 +20,9 @@
 11[done]. Find all students
 12[done]. Find students enrolled in **BCA** course
 13[done]. Find students whose age is greater than **18**
-14. Find students from a specific city
-15. Find students with name **Rahul**
-16. Find students using both age and course conditions
+14[done]. Find students from a specific city
+15[done]. Find students with name **Rahul**
+16[done]. Find students using both age and course conditions
 17. Find students with marks less than **60**
 18. Find students where `isActive` is true
 19. Find the latest **5 inserted** students

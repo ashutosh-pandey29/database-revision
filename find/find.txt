@@ -10,3 +10,21 @@ db.student.find({course:"BCA"});
 ==Find students whose age is greater than **18**
 
 db.student.find({ age: { $gt: 18 } });
+
+
+===Find students using both age and course conditions
+
+db.student.find({
+  age: { $gt: 20 },
+  course: "MA"
+});
+
+db.student.find({
+  $and: [
+    { age: { $gt: 20 } },
+    { course: "MA" }
+  ]
+});
+
+
+
