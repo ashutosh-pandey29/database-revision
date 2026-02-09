@@ -23,12 +23,12 @@
 14[done]. Find students from a specific city
 15[done]. Find students with name **Rahul**
 16[done]. Find students using both age and course conditions
-17. Find students with marks less than **60**
-18. Find students where `isActive` is true
-19. Find the latest **5 inserted** students
-20. Find only **one** student document
+17[done]. Find students with marks less than **60**
+18[done]. Find students where `isActive` is true
+19[done]. Find the latest **5 inserted** students
+20[done]. Find only **one** student document
 
----
+
 
 🔹 PROJECTION (21–28)
 ====================================

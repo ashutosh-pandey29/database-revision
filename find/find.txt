@@ -28,3 +28,13 @@ db.student.find({
 
 
 
+====Find the latest **5 inserted** students
+
+db.student.find().sort({_id:-1}).limit(5);
+db.student.find().sort({createdAt:-1}).limit(5);
+
+
+== find one
+========
+
+db.student.findOne({});
