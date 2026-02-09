@@ -1,0 +1,21 @@
+db.student.insertMany([
+  {
+    name:"rajat patil",
+    age:40,
+    marks:20,
+    gender:"male",
+    course:"BBA",
+    address:{
+      city:"kanpur",
+      country:"india"
+    }
+  },
+
+   {
+    name:"rama",
+    age:23,
+    marks:80,
+    gender:"female",
+    course:"BA",
+  },
+]);
