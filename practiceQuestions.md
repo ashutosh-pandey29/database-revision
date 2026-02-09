@@ -5,7 +5,7 @@
 1[done]. Insert a student with name  age  course ,  gender 
 2[done]. Insert multiple students at once
 3[done]. Insert a student document without the `marks` field
-4. Insert a student with `createdAt` date
+4[done]. Insert a student with `createdAt` date
 5. Insert a student with a nested object (address)
 6. Insert a student where `age` is a string instead of number
 7. Try inserting a document with a duplicate `_id`

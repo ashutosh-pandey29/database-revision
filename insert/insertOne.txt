@@ -1,3 +1,6 @@
+insertOne({}) = Inserts only one document into the collection; faster and safer when inserting single records.
+
+
 db.student.insertOne({
   name:"rahul kumar",
   age:20,
@@ -5,4 +8,17 @@ db.student.insertOne({
   gender:"male"
 });
 
-insertOne({}) = Inserts only one document into the collection; faster and safer when inserting single records.
+
+
+
+===insert document with createdAt 
+--------------------------------------
+
+db.student.insertOne({
+
+name:"parul",
+  age:25,
+  course:"MA",
+  gender:"female",
+  createdAt:new Date(),  
+});
