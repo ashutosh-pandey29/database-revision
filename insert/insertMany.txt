@@ -1,3 +1,6 @@
+insertMany() = inserts multiple documents at once; improves performance by reducing multiple DB calls.
+
+
 db.student.insertMany([
   {
     name:"rajat patil",
@@ -20,4 +23,3 @@ db.student.insertMany([
   },
 ]);
 
-insertMany() = inserts multiple documents at once; improves performance by reducing multiple DB calls.
