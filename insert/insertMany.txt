@@ -19,3 +19,5 @@ db.student.insertMany([
     course:"BA",
   },
 ]);
+
+insertMany() = inserts multiple documents at once; improves performance by reducing multiple DB calls.
