@@ -1,0 +1,8 @@
+db.student.insertOne({
+  name:"rahul kumar",
+  age:20,
+  course:"BA",
+  gender:"male"
+});
+
+insertOne({}) = Inserts only one document into the collection; faster and safer when inserting single records.

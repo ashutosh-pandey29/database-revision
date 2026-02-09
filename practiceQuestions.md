@@ -2,7 +2,7 @@
 
 ## 🔹 INSERT (1–10)
 
-1. Insert a student with name **Amit**, age **18**, course **BCA**
+1. Insert a student with name  age  course ,  gender 
 2. Insert multiple students at once
 3. Insert a student document without the `marks` field
 4. Insert a student with `createdAt` date
