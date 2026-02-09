@@ -23,3 +23,44 @@ name:"parul",
   createdAt:new Date(),  
 });
 
+==Try inserting a document with a duplicate `_id`
+
+db.student.insertOne({
+_id:'6989bf9d89089961f3cebea5',
+name:"sugam",
+  age:25,
+  course:"MA",
+  gender:"female",
+  createdAt:new Date(),  
+});
+
+==Insert a student with boolean field `isActive`
+==Insert a document with an extra field not defined in schema
+
+
+db.student.insertOne({
+name:"raghav",
+  age:28,
+  course:"MA",
+  gender:"male",
+isActive:true,
+address:{
+  city:"pune",
+}
+});
+
+
+
+===Insert a student with an array field `skills`
+
+db.student.insertOne({
+name:"suraj",
+  age:28,
+  course:"BCA",
+  gender:"male",
+address:{
+  city:"pune",
+  country:"india",
+},
+skills:["html"  ,  "css" , "js"]
+});

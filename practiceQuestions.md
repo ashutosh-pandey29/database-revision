@@ -8,10 +8,10 @@
 4[done]. Insert a student with `createdAt` date
 5[done]. Insert a student with a nested object (address)
 6[done]. Insert a student where `age` is a string instead of number
-7. Try inserting a document with a duplicate `_id`
-8. Insert a student with boolean field `isActive`
-9. Insert a student with an array field `skills`
-10. Insert a document with an extra field not defined in schema
+7[done]. Try inserting a document with a duplicate `_id`
+8[done]. Insert a student with boolean field `isActive`
+9[done]. Insert a student with an array field `skills`
+10[done]. Insert a document with an extra field not defined in schema
 
 
 🔹 FIND (11–20)
