@@ -3,3 +3,6 @@ find() = Returns all matching documents in the form of a cursor or array.
 
 ====find all 
 db.student.find(); OR db.student.find({});
+
+== find student enrolled in BCA
+db.student.find({course:"BCA"});
