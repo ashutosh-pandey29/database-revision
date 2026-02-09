@@ -6,3 +6,7 @@ db.student.find(); OR db.student.find({});
 
 == find student enrolled in BCA
 db.student.find({course:"BCA"});
+
+==Find students whose age is greater than **18**
+
+db.student.find({ age: { $gt: 18 } });

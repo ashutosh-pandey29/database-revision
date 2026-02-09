@@ -17,9 +17,9 @@
 🔹 FIND (11–20)
 =============================
 
-11. Find all students
-12. Find students enrolled in **BCA** course
-13. Find students whose age is greater than **18**
+11[done]. Find all students
+12[done]. Find students enrolled in **BCA** course
+13[done]. Find students whose age is greater than **18**
 14. Find students from a specific city
 15. Find students with name **Rahul**
 16. Find students using both age and course conditions
