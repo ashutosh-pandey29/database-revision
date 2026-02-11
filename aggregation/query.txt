@@ -1,0 +1,21 @@
+1. total orders 
+
+=> 1st way
+ db.orders.aggregate([
+    {
+      $count:"totalOrder"
+    }
+]);
+ => 2nd way 
+db.orders.aggregate([
+   {
+     $group:{
+      _id:null,
+      totalOrder :{$sum:1},
+    }
+   }
+]);
+
+
+Q2. total revenue
+
