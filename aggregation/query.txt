@@ -139,6 +139,16 @@ db.users.aggregate([
 
 Q14.
 
+db.orders.aggregate([
+  {
+    $addFields: {
+      orderYear: { $year: "$orderDate" }
+    }
+  }
+]);
+
+
+
 
 Q15.
 db.users.aggregate([
