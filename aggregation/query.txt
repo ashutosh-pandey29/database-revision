@@ -16,6 +16,204 @@ db.orders.aggregate([
    }
 ]);
 
-
 Q2. total revenue
 
+db.orders.aggregate([{
+  $group:{
+      _id:null,
+      totalRevenue:{$sum:"$totalAmount"}
+  }
+}]);
+
+Q3.  avg order amount
+
+db.orders.aggregate([{
+  $group:{
+    _id:null,
+    avgOrderAmount:{$avg:"$totalAmount"}
+  }
+}]);
+
+Q4. count delivered order 
+db.orders.aggregate([
+  {$match:{
+      status:"delivered",
+  }},
+  {$count:"status"}
+]);
+
+Q5. cancelled order
+
+db.orders.aggregate([
+  {$match:{status:"cancelled"}},
+  {$count:"status"}
+]);
+
+Q6. highest order amount.
+
+db.orders.aggregate([
+  {
+      $group:{
+      _id:null,
+      highestAmount:{$max:"$totalAmount"}
+  }
+  }
+]);
+
+Q7. lowest order amount
+db.orders.aggregate([
+  {
+      $group:{
+      _id:null,
+      lowestAmount:{$min:"$totalAmount"}
+  }
+  }
+]);
+
+Q8. 
+db.orders.aggregate([
+  {
+    $group:{
+      _id:"$status",
+      total:{$sum:1}
+    },
+  }
+]);
+
+Q9. 
+db.users.aggregate([
+  {
+    $group:{
+      _id:"$city",
+      totalUser:{$count:{}}
+    }
+  }
+]);
+
+Q10.
+
+db.orders.aggregate([
+  {$match:{status:"delivered"}},
+ { $group:{
+    _id:null,
+    total : {$sum:"$totalAmount"},
+  }}
+]);
+
+Q11. 
+
+db.orders.aggregate([
+  {
+    $match: {
+      orderDate: {
+        $gte: new Date("2024-03-01"),
+        $lt: new Date("2024-04-01")
+      }
+    }
+  }
+]);
+
+db.orders.aggregate([
+  {
+    $match: {
+      $and: [
+        { orderDate: { $gte: new Date("2024-03-01") } },
+        { orderDate: { $lt: new Date("2024-04-01") } }
+      ]
+    }
+  }
+]);
+
+Q12. 
+db.orders.aggregate([
+  { $sort:{totalAmount:-1}},
+    {$project:{_id:0 ,  totalAmount:1 }}
+]);
+
+Q13. 
+db.users.aggregate([
+  {
+    $project:{name:1 ,  city:1 ,  _id:0},
+  }
+]);
+
+Q14.
+
+
+Q15.
+db.users.aggregate([
+  {
+    $group:{
+      _id:"$city"
+    }
+  }
+]);
+
+Q16.
+db.users.aggregate([
+  {$match:{isPremium:true}},
+  {$count:"isPremium"}
+]);
+
+db.users.aggregate([
+  {$match:{isPremium:true}},
+  {
+    $group:{
+      _id:null,
+      totalPremiumUser :{$sum:1}
+    }
+  }
+]);
+
+// it count true and false both
+db.users.aggregate([
+  {
+    $group:{
+      _id:"$isPremium",
+      totalPremiumUser :{$sum:1}
+    }
+  }
+]);
+
+
+Q17.
+db.products.aggregate([
+  {
+    $group:{
+      _id:null,
+      totalStock:{$sum:"$stock"}
+    }
+  }
+]);
+
+Q18.
+db.products.aggregate([
+  {
+    $group:{
+      _id:"$category",
+      averagePrice :{$avg:"$price"}
+    }
+  }
+]);
+
+Q19.
+db.products.aggregate([
+  {
+    $group:{
+      _id:"$category",
+      totalProduct:{$sum:1}
+    }
+  }
+]);
+
+Q20.
+
+db.orders.aggregate([
+  {$unwind:"$products"},
+ {
+  $group:{
+    _id:null,
+    totalSold:{$sum:"$products.quantity"}
+  }
+ }
+]);
