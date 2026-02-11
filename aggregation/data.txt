@@ -1,0 +1,73 @@
+db.users.insertMany([
+  { _id: 1, name: "Amit", age: 25, city: "Delhi", isPremium: true },
+  { _id: 2, name: "Riya", age: 30, city: "Mumbai", isPremium: false },
+  { _id: 3, name: "John", age: 28, city: "Delhi", isPremium: true },
+  { _id: 4, name: "Sara", age: 35, city: "Bangalore", isPremium: false },
+  { _id: 5, name: "Raj", age: 22, city: "Mumbai", isPremium: true }
+])
+
+
+db.products.insertMany([
+  { _id: 101, name: "Laptop", category: "Electronics", price: 70000, stock: 10 },
+  { _id: 102, name: "Phone", category: "Electronics", price: 30000, stock: 20 },
+  { _id: 103, name: "Shoes", category: "Fashion", price: 2000, stock: 50 },
+  { _id: 104, name: "Watch", category: "Fashion", price: 5000, stock: 15 },
+  { _id: 105, name: "Headphones", category: "Electronics", price: 4000, stock: 25 }
+])
+
+
+
+db.orders.insertMany([
+  {
+    _id: 1001,
+    userId: 1,
+    products: [
+      { productId: 101, quantity: 1 },
+      { productId: 105, quantity: 2 }
+    ],
+    totalAmount: 78000,
+    status: "delivered",
+    orderDate: new Date("2024-01-10")
+  },
+  {
+    _id: 1002,
+    userId: 2,
+    products: [
+      { productId: 103, quantity: 3 }
+    ],
+    totalAmount: 6000,
+    status: "pending",
+    orderDate: new Date("2024-02-15")
+  },
+  {
+    _id: 1003,
+    userId: 1,
+    products: [
+      { productId: 102, quantity: 1 }
+    ],
+    totalAmount: 30000,
+    status: "delivered",
+    orderDate: new Date("2024-03-05")
+  },
+  {
+    _id: 1004,
+    userId: 3,
+    products: [
+      { productId: 104, quantity: 2 }
+    ],
+    totalAmount: 10000,
+    status: "cancelled",
+    orderDate: new Date("2024-03-20")
+  },
+  {
+    _id: 1005,
+    userId: 5,
+    products: [
+      { productId: 101, quantity: 1 },
+      { productId: 103, quantity: 2 }
+    ],
+    totalAmount: 74000,
+    status: "delivered",
+    orderDate: new Date("2024-04-01")
+  }
+])

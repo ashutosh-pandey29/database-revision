@@ -1,0 +1,79 @@
+BASIC LEVEL (1–20)
+===================================
+
+1. Find total number of orders.
+2. Find total revenue generated.
+3. Find average order amount.
+4. Count delivered orders.
+5. Count cancelled orders.
+6. Find highest order amount.
+7. Find lowest order amount.
+8. Group orders by status and count them.
+9. Group users by city and count them.
+10. Find total revenue for delivered orders only.
+11. Find orders placed in March 2024.
+12. Sort orders by totalAmount descending.
+13. Project only name and city from users.
+14. Add a field `orderYear` from orderDate.
+15. Get distinct cities from users.
+16. Count how many premium users exist.
+17. Find total stock available (sum of stock).
+18. Find average product price per category.
+19. Find number of products in each category.
+20. Find total quantity sold (from orders).
+
+
+ INTERMEDIATE LEVEL (21–40)
+ ==============================
+
+21. Find total spending per user.
+22. Find highest spending user.
+23. Find lowest spending user.
+24. Join orders with users using `$lookup`.
+25. Show order with user name and city.
+26. Join orders → products (using unwind).
+27. Find total quantity sold per product.
+28. Find most sold product.
+29. Find revenue per product.
+30. Find revenue per category.
+31. Find users who placed more than 1 order.
+32. Find average order value per user.
+33. Find monthly revenue.
+34. Find number of orders per month.
+35. Find users who never placed any order.
+36. Find products that were never ordered.
+37. Find premium users' total spending.
+38. Find city-wise revenue.
+39. Find top 2 expensive products.
+40. Find second highest order amount.
+
+ ADVANCED LEVEL (41–60)
+==================================
+41. Use `$facet` to get:
+* total revenue
+* total orders
+* average order value
+
+42. Use `$bucket` to group users by age:
+* 18–25
+* 26–30
+* 31–40
+
+43. Use `$bucketAuto` to auto divide products by price.
+44. Find top 2 highest spending users using `$sort + $limit`.
+45. Find percentage contribution of each user to total revenue.
+46. Use `$setWindowFields` to rank users by spending.
+47. Find running total of revenue month-wise.
+48. Find difference between each order and previous order amount.
+49. Find cumulative revenue till each order date.
+50. Find products frequently bought together.
+51. Find most popular category.
+52. Find repeat customers (more than 1 delivered order).
+53. Find user who placed the first order.
+54. Find user who placed the most recent order.
+55. Find orders where totalAmount > average order amount.
+56. Find top city by revenue.
+57. Use `$graphLookup` (if category hierarchy added).
+58. Calculate average quantity per order.
+59. Find users whose total spending is above overall average spending.
+60. Create a dashboard query using `$facet`:
